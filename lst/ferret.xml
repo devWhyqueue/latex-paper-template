@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/xsl" href="uhferret.xsl" ?>
+<uhferret>
+    <common-trigrams>74</common-trigrams>
+    <similarity>0.448</similarity>
+    <document>
+        <source>s2-lex.txt</source>
+        <num-trigrams>116</num-trigrams>
+        <containment>0.602</containment>
+        <text>
+            <block text="unique">
+                <![CDATA[motivation:
+motivation ist eine energie, die von individuellen werten, einstellungen und
+bedürfnissen produziert auf ein bestimmtes ziel hinlenkt.
+
+effizientes lesen:
+wenn wir diese fragen vor der lektüre des textes präzise beantworten, können wir
+uns eine menge lesearbeit und damit viel zeit ersparen]]>
+            </block>
+            <block text="same">
+                <![CDATA[.
+
+effektive zusammenarbeit:
+zunächst ist es entscheidend mit dem team eine struktur zu finden, in der die
+mitglieder am besten zusammenarbeiten.
+daraus entsteht eine ergebnisorientierte arbeitskultur, in der individuelle
+stärken und ressourcen optimal genutzt werden.
+ein weiterer essentieller erfolgsfaktor ist das einhalten verbindlicher
+vereinbarungen -- dies gilt auch außerhalb der projektbasierten arbeit.
+des weiteren ist insbesondere bei teams aus hoch spezialisierten mitarbeitern
+die balance zwischen dem individuellen kreativen freiraum und der orientierung
+am gesamtergebnis für den erfolg entscheidend]]>
+            </block>
+        </text>
+    </document>
+    <document>
+        <source>s2.txt</source>
+        <num-trigrams>123</num-trigrams>
+        <containment>0.638</containment>
+        <text>
+            <block text="unique">
+                <![CDATA[motivation:
+motive sind, ob bewusst oder unbewusst, die triebfedern unseres handelns.
+da motive nicht angeboren, sondern erworben und damit veränderbar sind, können
+sie ihre eigene motivation beeinflussen und steuern.
+
+effizientes lesen:
+damit können wir sicherstellen, dass wir für die texte, die wir dann wirklich
+lesen wollen, hinreichend motivation haben]]>
+            </block>
+            <block text="same">
+                <![CDATA[. 
+
+effektive zusammenarbeit:
+zunächst ist es entscheidend mit dem team eine struktur zu finden, in der die
+mitglieder am besten zusammenarbeiten.
+daraus entsteht eine ergebnisorientierte arbeitskultur, in der individuelle stärken
+und ressourcen optimal genutzt werden.
+ein weiterer essentieller erfolgsfaktor ist das einhalten verbindlicher
+vereinbarungen -- dies gilt auch außerhalb der projektbasierten arbeit.
+des weiteren ist insbesondere bei teams aus hoch spezialisierten mitarbeitern die
+balance zwischen dem individuellen kreativen freiraum und der orientierung am
+gesamtergebnis für den erfolg entscheidend]]>
+            </block>
+        </text>
+    </document>
+</uhferret>

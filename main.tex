@@ -1,0 +1,29 @@
+\documentclass[b5paper]{scrbook}
+\usepackage{main}
+
+% Bibliography
+\addbibresource{citavi.bib}
+
+% Acronyms
+\include{acro}
+
+% Document
+\begin{document}
+
+\frontmatter
+
+\include{tex/cover}
+\setcounter{page}{1}
+\tableofcontents
+
+\mainmatter{}
+
+\include{tex/intro}
+\include{tex/research}
+\include{tex/practice}
+\include{tex/conclusions}
+
+\appendix
+\include{tex/appendix}
+
+\end{document}

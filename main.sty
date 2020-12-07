@@ -1,0 +1,105 @@
+\ProvidesPackage{main}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{microtype}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{mathtools}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage[style=alphabetic,backend=biber]{biblatex}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage[ngerman]{cleveref}
+\usepackage{fancyhdr}
+\usepackage[acronym]{glossaries}
+\usepackage{geometry}
+\usepackage{minted}
+\usepackage{booktabs}
+\usepackage[normalem]{ulem}
+\usepackage{multirow}
+\usepackage{csquotes}
+\usepackage{blindtext}
+\usepackage{scrhack}
+\usepackage{tikz-qtree}
+\usepackage{enumitem}
+\usepackage{pdfpages}
+\usepackage[section]{placeins}
+\usepackage{lscape}
+
+% Minted
+\setminted{
+    frame=lines,
+    fontsize=\scriptsize,
+    escapeinside=||
+}
+
+% Caption
+\newenvironment{longlisting}{\captionsetup{type=listing}}{}
+
+% Tikz
+\tikzset{
+    every node/.style={draw, text width=3cm, rectangle, rounded corners=2pt, align=center},
+    execute at begin node=\strut
+}
+
+% Debugging
+\overfullrule=2cm
+
+% Head and foot
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[LE,RO]{\thepage}
+\fancyhead[RO]{\rightmark}
+\fancyhead[LE]{\leftmark}
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\thechapter\ #1}}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}{}}
+
+% Table of contents
+\setcounter{tocdepth}{1}
+
+% Citations
+\renewcommand{\mkbegdispquote}[2]{\openautoquote}
+\renewcommand{\mkenddispquote}[2]{\closeautoquote#1#2}
+\newcommand{\indcite}[2][]{(vgl.\ \cite[#1]{#2})}
+
+% Image path
+\graphicspath{{img/}}
+
+% Glossary
+\glsdisablehyper
+
+% Colors
+\definecolor{fhdo}{HTML}{F28D01}
+\definecolor{plag}{HTML}{BA2121}
+\definecolor{link}{HTML}{A66101}
+
+% Ulem
+\useunder{\uline}{\ul}{}
+
+% Hyperref
+\hypersetup{colorlinks=true,allcolors=link}
+
+% Standard abbreviations
+\newcommand{\idr}{i.\,d.\,R.}
+\newcommand{\bspw}{bspw.}
+\newcommand{\bzw}{bzw.}
+\newcommand{\ca}{ca.}
+\newcommand{\dahe}{d.\,h.}
+\newcommand{\etc}{etc.}
+\newcommand{\evtl}{evtl.}
+\newcommand{\ggf}{ggf.}
+\newcommand{\inkl}{inkl.}
+\newcommand{\insb}{insb.}
+\newcommand{\ua}{u.\,a.}
+\newcommand{\usw}{usw.}
+\newcommand{\zb}{z.\,B.}
+\newcommand{\oae}{o.\,ä.}
+\newcommand{\bzgl}{bzgl.}
+\newcommand{\uvm}{u.\,v.\,m.}
+\newcommand{\etal}{et al.}
+\newcommand{\en}[1]{engl. \emph{#1}}

@@ -1,0 +1,80 @@
+% State of research
+\chapter{Hauptteil}
+
+\section{Link}
+Das ist ein \hyperref[ch:intro]{Link}.
+
+\section{Liste}
+\begin{itemize}
+    \item \textbf{Unzureichendes Wissen:} Studenten sind besonders zu Beginn ihres Studiums nicht mit wissenschaftlicher Methodik vertraut und kennen \ggf{} nicht die Regeln zum korrekten Zitieren oder Referenzieren.
+    \item \textbf{Effizienzsteigerung:} Durch Aneignung fremder Leistungen wird der eigene Arbeitsaufwand reduziert und bessere Ergebnisse können in kürzerer Zeit erzielt werden.
+    \item \textbf{Einstellung zur Aufgabe:} Vereinzelt fehlt das Verständnis für die Bedeutsamkeit der Aufgabenstellung. Dies kann in manchen Fällen auf ein fehlendes Vertrauen in die Lehrperson zurückgeführt werden.
+\end{itemize}
+
+\section{Aufzählung}
+\begin{enumerate}[align=left, leftmargin=3em]
+    \item [{\bfseries RQ1.}] Was wird in der Wissenschaft als Plagiat bezeichnet?
+    \item [{\bfseries RQ2.}] Wie können Plagiate vermieden, erkannt und geahndet werden?
+    \item [{\bfseries RQ3.}] Welche frei verfügbaren Tools eignen sich für die CaPD?
+    \item [{\bfseries RQ4.}] Wo besteht noch Verbesserungspotential?
+\end{enumerate}
+
+\section{Tabelle}
+\cref{tab:coverage} skizziert seine wesentlichen Ideen.
+\input{tab/coverage.tex}
+
+\section{Bild}
+\begin{figure}
+    \centering
+    \includegraphics[width=0.9\textwidth]{sherlock-overview}
+    \caption{Ergebnisübersicht von \emph{Sherlock}}\label{fig:sherlockSum}
+\end{figure}
+
+\section{Tikz}
+\begin{figure}
+    \centering
+    \resizebox{0.9\textwidth}{!}{%
+        \begin{tikzpicture}[grow=right, level distance=4cm, sibling distance=0.5cm]
+            \Tree [.Plagiat
+                    [.{andere Plagiate} {Plagiat mit Erlaubnis} Selbstplagiat Ghostwriting ]
+                    [.intelligent
+                            [.ideenbasiert Struktur\-plagiat ]
+                            [.semantisch {Übersetzungs\-plagiat} {unzulässiges Paraphrasieren} ]
+                    ]
+                    [.{buchstäblich/\\wörtlich}
+                            [.syntaktisch {Synonym\-substitution} {technische Verschleierung} ]
+                            [.lexikalisch {schein\-paraphrasieren} {wörtliches Kopieren} ]
+                    ]
+            ]
+        \end{tikzpicture}
+    }%
+    \caption{Plagiat -- Eine Taxonomie}\label{fig:taxonomy}% chktex 8
+\end{figure}
+
+\section{Textzitat}
+So definiert der Duden Plagiat als \textcquote{Dudenredaktion.2018}{unrechtmäßige Aneignung von Gedanken, Ideen \oae{} eines anderen auf künstlerischem oder wissenschaftlichem Gebiet und ihre Veröffentlichung; Diebstahl geistigen Eigentums}.
+
+\section{Blockzitat}
+\begin{displaycquote}[1]{Manning.2018cop.2008}
+    Information retrieval (IR) is finding material (usually documents) of an unstructured nature (usually text) that satisfies an information need from within large collections (usually stored on computers).
+\end{displaycquote}
+
+\section{Indirektes Zitat}
+Außerdem entsteht -- insbesondere bei studentischen Arbeiten -- zumeist kein messbarer Verlust für den Autor, während dies bei einem Diebstahl sehr wohl der Fall wäre \indcite[2\psq]{TeddiFishman.2009}.
+
+\section{Gleichung}
+\begin{equation}\label{eqn:prec}
+    \mbox{prec}=\frac{|\{\mbox{relevant results}\}|}{|\{\mbox{results}\}|}
+\end{equation}
+
+\section{Listing}
+\begin{listing}
+    \inputminted{bat}{lst/ferret.txt}
+    \caption{Konsolenausgabe von \emph{Ferret}}\label{lst:ferret}
+\end{listing}
+
+\section{Langes Listing}
+\begin{longlisting}
+    \inputminted{xml}{lst/ferret.xml}
+    \caption{Detaillierter Bericht von \emph{Ferret}}\label{lst:ferretXml}
+\end{longlisting}

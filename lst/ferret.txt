@@ -1,0 +1,17 @@
+ferret <dir>
+
+:: File 1, file 2, common trigrams, file1 trigrams, file2 trigrams,
+:: similarity measure
+s2-lex.txt,s2.txt,74,116,123,0.448
+s3-lex.txt,s3.txt,24,71,53,0.240
+s3-syn.txt,s3.txt,19,50,53,0.226
+s2-syn.txt,s2.txt,38,122,123,0.184
+s1-lex.txt,s1.txt,24,154,110,0.100
+s3-sem.txt,s3.txt,11,71,53,0.097
+s2-sem.txt,s2.txt,21,131,123,0.090
+s1-syn.txt,s1.txt,25,195,110,0.089
+s1-sem.txt,s1.txt,3,208,110,0.010
+
+:: Detailed comparison
+ferret -x s2-lex.txt s2.txt comparison.xml
+:: Comparison.xml is shown in next listing
