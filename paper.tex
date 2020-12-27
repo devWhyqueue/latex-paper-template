@@ -1,8 +1,11 @@
-\documentclass[b5paper]{scrbook}
-\usepackage{main}
+\documentclass[b5paper, oneside]{scrbook}
+\usepackage{paper}
 
 % Bibliography
 \addbibresource{citavi.bib}
+
+% Customizations
+\include{customize}
 
 % Acronyms
 \include{acro}
@@ -25,5 +28,6 @@
 
 \appendix
 \include{tex/appendix}
+\include{tex/declaration}
 
 \end{document}

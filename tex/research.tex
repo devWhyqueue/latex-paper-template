@@ -12,12 +12,25 @@ Das ist ein \hyperref[ch:intro]{Link}.
 \end{itemize}
 
 \section{Aufzählung}
-\begin{enumerate}[align=left, leftmargin=3em]
-    \item [{\bfseries RQ1.}] Was wird in der Wissenschaft als Plagiat bezeichnet?
-    \item [{\bfseries RQ2.}] Wie können Plagiate vermieden, erkannt und geahndet werden?
-    \item [{\bfseries RQ3.}] Welche frei verfügbaren Tools eignen sich für die CaPD?
-    \item [{\bfseries RQ4.}] Wo besteht noch Verbesserungspotential?
+\begin{enumerate}[label=RQ\arabic*.]
+    \item Was wird in der Wissenschaft als Plagiat bezeichnet?
+    \item Welche Möglichkeiten gibt es, um Plagiate zu vermeiden, erkennen und angemessen zu ahnden?
+    \item Welche frei verfügbaren Tools eignen sich für die CaPD?
+    \item Wo besteht noch Verbesserungspotential?
 \end{enumerate}
+
+\section{Gegliederte Beschreibung}
+\begin{description}[style=unboxed, leftmargin=0cm]
+    \item[Ein Beispiel] Sei Plagiatsfall \(s=s_{plg}\cup s_{src}=\{(1,d_{plg}),(2,d_{plg}),(3,d_{plg})\}\cup\{(4,d_{src}),(5,d_{src}),(6,d_{src}),(7,d_{src})\}\), der durch die Plagiatserkennungen \(r_1=(r_1)_{plg}\cup (r_1)_{src}=\{(1,d_{plg})\}\cup\{(4,d_{src}),(5,d_{src})\}\) und \(r_2=(r_2)_{plg}\cup (r_2)_{src}=\{(3,d_{plg}),(4,d_{plg})\}\cup\{(7,d_{src})\}\) teilweise erkannt wird.\footnote{Es mag zunächst ungewöhnlich erscheinen, dass \(|s_{plg}|<|s_{src}|\) oder \((4,d_{plg})\notin s_{plg}\), aber \((4,d_{plg})\in(r_2)_{plg}\). Diese Fälle sind jedoch keineswegs Ausnahmen. Besonders bei semantischen Plagiaten haben Plagiat- und Quelltextfragmente in der Praxis nur selten dieselbe Länge und es kommt vermehrt zu falsch positiven Ergebnissen.}
+    In diesem einfachen Beispiel existiert nur ein Plagiatsfall und zwei zugehörige Plagiatserkennungen.
+    Folglich ist \(|S|=|\{s\}|=1\) und \(|R|=|\{r_1,r_2\}|=2\).
+    \item[Bestimmung der Genauigkeit] Für die Genauigkeit \(\prc_{macro}(S,R)\) muss nun für jede Erkennung \(r\in R\) der Wert des Bruchs \(\frac{|\bigcup_{s\in S}(s\sqcap r)|}{|r|}\) bestimmt werden.
+    Sowohl \(r_1\) als auch \(r_2\) erkennen (einen Teil von) \(s\), daher gilt für beide \(s\sqcap r=s\cap r\).
+    Beide Plagiatserkennungen sind gleich mächtig mit \(|r_1|=|r_2|=3\), was sich aus ihren Definitionen einfach abzählen lässt.
+    Es verbleibt also nur noch die Berechnung der Kardinalität der Schnittmengen aus den Plagiatserkennungen und dem Plagiatsfall \(s\).
+    Für \(r_1\) ergibt sich hier \(|s\cap r_1|=|r_1|=3\), da die Plagiatserkennung keine falsch positiven (plagiierten) Zeichen zurückgibt.
+    Bei \(r_2\) sieht das anders aus, \(|r_2|>|s\cap r_2|=|\{(3,d_{plg})\}\cup\{(7,d_{src})\}|=2\).
+\end{description}
 
 \section{Tabelle}
 \cref{tab:coverage} skizziert seine wesentlichen Ideen.

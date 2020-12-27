@@ -1,0 +1,115 @@
+\ProvidesPackage{paper}
+
+% Packages
+% -------------
+% Text and styles
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{microtype}
+\usepackage{lmodern}
+\usepackage[ngerman]{babel}
+\usepackage{blindtext}
+\usepackage{bm}
+\usepackage{fancyhdr}
+\usepackage{geometry}
+\usepackage[normalem]{ulem}
+
+% Figures, tables, lists, listings, math
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{enumitem}
+\usepackage{minted}
+\usepackage{mathtools}
+\usepackage{caption}
+\usepackage{tikz-qtree}
+
+% Biblography and references
+\usepackage[style=alphabetic,backend=biber]{biblatex}
+\usepackage{csquotes}
+\usepackage[section]{placeins}
+\usepackage[acronym]{glossaries}
+\usepackage{hyperref}
+\usepackage[ngerman]{cleveref}
+
+% Miscellaneous 
+\usepackage{scrhack}
+
+% Package configurations
+% -------------------------
+% Text and styles
+\overfullrule=2cm
+\setcounter{tocdepth}{1}
+\pagestyle{fancy}
+\fancyhf{}
+% Oneside
+\fancyfoot[C]{\thepage}
+\fancyhead[R]{\rightorleftmark}
+% Twoside
+% \fancyfoot[LE,RO]{\thepage}
+% \fancyhead[RO]{\rightmark}
+% \fancyhead[LE]{\leftmark}
+\useunder{\uline}{\ul}{}
+
+% Figures, tables, lists, listings, math
+\graphicspath{{img/}}
+\tikzset{
+    every node/.style={draw, text width=3cm, rectangle, rounded corners=2pt, align=center},
+    execute at begin node=\strut
+}
+\setlist[enumerate]{style=nextline, font=\bfseries, leftmargin=3.5em}
+\setminted{
+    frame=lines,
+    fontsize=\scriptsize,
+    escapeinside=||
+}
+\newenvironment{longlisting}{\captionsetup{type=listing}}{}
+
+% Biblography and references
+\glsdisablehyper
+\hypersetup{colorlinks=true,allcolors=link}
+\setcounter{biburlnumpenalty}{9000}
+\setcounter{biburllcpenalty}{9000}
+
+% Modified commands
+% --------------------
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{\thechapter\ #1}}{}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}{}}
+\makeatletter
+\newcommand{\rightorleftmark}{%
+  \begingroup\protected@edef\x{\rightmark}%
+  \ifx\x\@empty
+    \endgroup\leftmark
+  \else
+    \endgroup\rightmark
+  \fi}
+\makeatother
+\renewcommand{\mkbegdispquote}[2]{\openautoquote}
+\renewcommand{\mkenddispquote}[2]{\closeautoquote#1#2}
+
+% Own commands
+% --------------
+\newcommand{\indcite}[2][]{(\vgl{} \cite[#1]{#2})}
+\newcommand{\idr}{i.\,d.\,R.}
+\newcommand{\bspw}{bspw.}
+\newcommand{\bzw}{bzw.}
+\newcommand{\ca}{ca.}
+\newcommand{\dahe}{d.\,h.}
+\newcommand{\etc}{etc.}
+\newcommand{\evtl}{evtl.}
+\newcommand{\ggf}{ggf.}
+\newcommand{\inkl}{inkl.}
+\newcommand{\insb}{insb.}
+\newcommand{\ua}{u.\,a.}
+\newcommand{\usw}{usw.}
+\newcommand{\zb}{z.\,B.}
+\newcommand{\oae}{o.\,ä.}
+\newcommand{\bzgl}{bzgl.}
+\newcommand{\uvm}{u.\,v.\,m.}
+\newcommand{\etal}{et al.}
+\newcommand{\en}[1]{engl. \emph{#1}}
+\newcommand{\vgl}{vgl.}
+
