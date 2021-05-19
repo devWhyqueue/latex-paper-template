@@ -8,7 +8,7 @@
 \usepackage{textcomp}
 \usepackage{microtype}
 \usepackage{lmodern}
-\usepackage[ngerman]{babel}
+\usepackage[english,ngerman]{babel}
 \usepackage{blindtext}
 \usepackage{bm}
 \usepackage{fancyhdr}
@@ -19,6 +19,7 @@
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{booktabs}
 \usepackage{multirow}
+\usepackage[bottom]{footmisc}
 \usepackage{graphicx}
 \usepackage{lscape}
 \usepackage{enumitem}
@@ -26,12 +27,13 @@
 \usepackage{mathtools}
 \usepackage{caption}
 \usepackage{tikz-qtree}
+\usepackage{rotating}
 
 % Biblography and references
 \usepackage[style=alphabetic,backend=biber]{biblatex}
 \usepackage{csquotes}
 \usepackage[section]{placeins}
-\usepackage[acronym]{glossaries}
+\usepackage[acronym,shortcuts]{glossaries}
 \usepackage{hyperref}
 \usepackage[ngerman]{cleveref}
 
@@ -55,6 +57,7 @@
 \useunder{\uline}{\ul}{}
 
 % Figures, tables, lists, listings, math
+\renewcommand{\arraystretch}{1.2}
 \graphicspath{{img/}}
 \tikzset{
     every node/.style={draw, text width=3cm, rectangle, rounded corners=2pt, align=center},
@@ -93,8 +96,9 @@
 % Own commands
 % --------------
 \newcommand{\indcite}[2][]{(\vgl{} \cite[#1]{#2})}
-\newcommand{\en}[1]{(engl. \emph{#1})}
-\newcommand{\term}[1]{\emph{#1}}
+\newcommand{\en}[1]{(engl.\ \emph{#1})}
+\newcommand{\python}[1]{\mintinline[breaklines, fontsize=\normalsize]{python}{#1}}
+
 \newcommand{\idr}{i.\,d.\,R.}
 \newcommand{\bspw}{bspw.}
 \newcommand{\bzw}{bzw.}
